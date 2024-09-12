@@ -1,0 +1,30 @@
+#!/bin/bash
+
+branch_name="$(git rev-parse --abbrev-ref HEAD)"
+
+#echo "$branch_name"
+
+if ! [[ "$branch_name" =~ ^(minor|major|patch)\/ ]]; then
+    echo "Error: Branch name '$branch_name' must start with minor/, major/, or patch/."
+    exit 1
+fi
+
+invalid_commit_found=0
+
+while IFS= read -r commit_msg; do
+    # skip empty lines
+    if [ -z "$commit_msg" ]; then
+        continue
+    fi
+    #echo "$commit_msg"
+    if ! [[ "$commit_msg" =~ GENERATED|REFACTOR|DEPRECATE|STYLE|CONF|TEST|DOCS|PERF|FEATURE|BUGFIX|CHORE ]]; then
+        echo "Error: commit message \"$commit_msg\" does not contain [GENERATED|REFACTOR|DEPRECATE|STYLE|CONF|TEST|DOCS|PERF|FEATURE|BUGFIX|CHORE]"
+        invalid_commit_found=1
+    fi
+done < <(git log --oneline --format=%B "$branch_name" --not $(git for-each-ref --format='%(refname)' refs/heads/ | grep -sv "refs/heads/${branch_name}"))
+
+if [ "$invalid_commit_found" -eq 1 ]; then
+    exit 1
+fi
+
+exit 0
