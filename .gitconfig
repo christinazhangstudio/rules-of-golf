@@ -1,0 +1,26 @@
+[user]
+	name = Christina Zhang
+	email = XXX
+[url "ssh://git@XXX.com:7999"]
+	insteadOf = https://XXX.com
+[url "git@XXX.com:"]
+	insteadOf = https://XXX.com/
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[push]
+	autoSetupRemote = true
+[alias]
+	sync = !git reset --hard origin/$(git branch --show-current)
+	irb = "!f() { git rebase -i HEAD~$1; }; f"
+	co = !git checkout
+	com = !git checkout main
+	cm = !git commit
+	pb = !git pull --rebase
+	fixallup = "!f() { git reset --soft $(git merge-base main HEAD); git commit -m \"$1\"; echo 'to finalize, git push -f'; }; f"
+[core]
+	ignorecase = false
+	eol = lf
+	autocrlf = false
