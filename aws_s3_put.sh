@@ -16,7 +16,7 @@ function copy_file_to_bucket() {
         echo -e "posting \e[34m$2\e[0m to \e[32m'$bucket_name\e[0m as \e[33m$destination_file_name\e[0m..."
 
         response=$(aws s3api put-object \
-                --endpoint-url="https://sjc04purevip.teslamotors.com" \
+                --endpoint-url="https://XXX.com" \
                 --bucket "$bucket_name" \
                 --body "$source_file" \
                 --key "$destination_file_name")
