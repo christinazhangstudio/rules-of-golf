@@ -8,6 +8,7 @@ IndentCaseLabels: false
 AccessModifierOffset: -4
 NamespaceIndentation: All
 PointerAlignment: Left
+SpaceAfterCStyleCast: true
 
 
 // put in root dir
