@@ -52,6 +52,7 @@
         "workbench.action.tasks.configureTaskRunner",
         "workbench.action.tasks.runTask"
     ],
+    // C/C++
     "cmake.options.statusBarVisibility": "compact",
     "[cpp]": {
         "editor.formatOnSave": true,
