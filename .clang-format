@@ -1,4 +1,13 @@
 BasedOnStyle: LLVM
+UseTab: Always
+IndentWidth: 4
+TabWidth: 4
+AllowShortIfStatementsOnASingleLine: false
+BreakBeforeBraces: Custom
+IndentCaseLabels: false
+AccessModifierOffset: -4
+NamespaceIndentation: All
 PointerAlignment: Left
+
 
 // put in root dir
