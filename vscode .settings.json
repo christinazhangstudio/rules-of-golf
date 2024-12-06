@@ -1,0 +1,61 @@
+{
+    // editor
+    "editor.fontFamily": "'Input Mono Light'",
+    "editor.inlayHints.fontFamily": "'Input Mono Thin'",
+    "editor.largeFileOptimizations": true,
+    "editor.minimap.autohide": true,
+    "editor.minimap.maxColumn": 100,
+    "editor.minimap.scale": 2,
+    "editor.minimap.size": "fill",
+    "editor.foldingMaximumRegions": 10000,
+    "editor.minimap.renderCharacters": false,
+    "editor.formatOnSave": true,
+    // terminal
+    "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe -nologo",
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.integrated.fontFamily": "MesloLGL Nerd Font",
+    // UNKNOWN
+    "explorer.confirmDelete": false,
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 2,
+    "redhat.telemetry.enabled": false,
+    // GOLANG
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
+    "go.lintOnSave": "off",
+    "go.formatTool": "gofmt",
+    "go.enableCodeLens": {
+        "runtest": true
+    },
+    "go.testOnSave": false, // BiG
+    "go.toolsManagement.autoUpdate": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+    },
+    // K8S (helm stuff)
+    "vs-kubernetes": {
+        "vs-kubernetes.knownKubeconfigs": [
+            "c:\\Users\\chrzhang\\.kube\\config",
+            "\\\\wsl.localhost\\Ubuntu-22.04\\home\\chrzhang\\.kube\\config",
+        ],
+        "vs-kubernetes.kubeconfig": "c:\\Users\\chrzhang\\.kube\\config",
+        "vscode-kubernetes.minikube-path-windows": "C:\\Users\\chrzhang\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe"
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.explorerKind": "external",
+    "git.ignoreRebaseWarning": true,
+    "cmake.configureSettings": {},
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.options.statusBarVisibility": "compact",
+    "[cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "clang-format.executable": "C:\\Program Files\\LLVM\\bin\\clang-format.exe",
+}
