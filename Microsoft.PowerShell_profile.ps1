@@ -1,4 +1,7 @@
-######## ENV VARS ######
+######## SETS ENV VARS ######
+$env:EXAMPLE_ENV = "itschristina"
+
+######## SETS POWERSHELL ENV VARS ######
 Set-Variable -Name "EXAMPLE_ENV" -Value "itschristina"
 
 ##### BEARER TOKEN ######
