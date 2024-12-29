@@ -23,4 +23,8 @@ powershell.exe -Command "Get-Process"
 ```
 
 
+When Powershell is giving you a hard time with path fmt:
+```sh
+powershell.exe Get-ChildItem -Path "'C:\\Program Files\\Go\\bin'"
+```
 
