@@ -2,13 +2,13 @@
 
 When invoking something at a path:
 
-```ps
+```sh
 & "C:\path\to\exe"
 ```
 not needed for curr dir or something on `PATH`
 
 When running command block:
-```ps
+```sh
 & { command-block }
 ```
 
@@ -18,7 +18,7 @@ When running command block:
 for when you want to execute PowerShell commands from outside a PowerShell session
 (such as from a command prompt, batch script, or another process).
 
-```ps
+```sh
 powershell.exe -Command "Get-Process"
 ```
 
