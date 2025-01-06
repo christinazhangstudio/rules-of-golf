@@ -7,14 +7,14 @@ Get-ChildItem -Path "C:\" -Filter "*.exe" -Recurse -File
 
 ## Using `&`
 
-When invoking something at a path:
+### When invoking something at a path:
 
 ```powershell
 & "C:\path\to\exe"
 ```
 not needed for curr dir or something on `PATH`
 
-When invoking something at a path with an env var interpolated:
+### When invoking something at a path with an env var interpolated:
 ```powershell
 chrzhang> & { "$env:HELLO\CATSTART.exe" }
 ```
@@ -26,7 +26,7 @@ chrzhang> & { "$env:HELLO\\CATSTART.exe" }
 (wdw1)
 
 
-When running command block:
+### When running command block:
 
 ```powershell
 & { command-block }
@@ -46,7 +46,7 @@ powershell.exe -Command "Get-Process"
 
 ## When Powershell is giving you a hard time with path fmt:
 
-```sh
+```powershell
 powershell.exe Get-ChildItem -Path "'C:\\Program Files\\Go\\bin'"
 ```
 
