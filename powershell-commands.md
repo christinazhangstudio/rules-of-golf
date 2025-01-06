@@ -16,6 +16,10 @@ not needed for curr dir or something on `PATH`
 
 ### When invoking something at a path with an env var interpolated:
 ```powershell
+& $env:HELLO\CATSTART.exe
+```
+
+```powershell
 & "$env:HELLO\CATSTART.exe"
 ```
 or
