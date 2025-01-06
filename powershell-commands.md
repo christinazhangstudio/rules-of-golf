@@ -15,16 +15,17 @@ When invoking something at a path:
 not needed for curr dir or something on `PATH`
 
 When invoking something at a path with an env var interpolated:
+```powershell
+chrzhang> & { "$env:HELLO\CATSTART.exe" }
 ```
-> { "$env:USER\\CATSTART.exe" }
-\\CATSTART.exe
-helm-charts> & { echo "$env:OMS_CATSTART_PATH\\CATSTART.exe" }
-\\CATSTART.exe
-helm-charts> & { echo "$env:USER\\CATSTART.exe" }
-chrzhang\\CATSTART.exe
-helm-charts> & { echo '$env:USER\\CATSTART.exe' }
-$env:USER\\CATSTART.exe
+or
+
+```powershell
+chrzhang> & { "$env:HELLO\\CATSTART.exe" }
 ```
+
+----
+
 (wdw1)
 
 
