@@ -60,6 +60,12 @@ for when you want to execute PowerShell commands from outside a PowerShell sessi
 powershell.exe -Command "Get-Process"
 ```
 
+```powershell
+powershell.exe -Command "&{ & '$env:HELLO\CATSTART.exe' }"
+```
+
+wdw(2)
+
 
 ## When Powershell is giving you a hard time with path fmt:
 
@@ -104,4 +110,13 @@ C:\Program Files\...\bin\\CATSTART.exe
 ```powershell
 chrzhang> & { "$env:HELLO\\CATSTART.exe" }
 C:\Program Files\...\bin\\CATSTART.exe
+```
+
+(2)
+```powershell
+powershell -Command "&{ & "$env:HELLO\CATSTART.exe" }"
+```
+
+```powershell
+powershell -Command "&{ & $env:HELLO\CATSTART.exe }"
 ```
