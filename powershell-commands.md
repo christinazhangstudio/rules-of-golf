@@ -23,9 +23,6 @@ or
 ```powershell
 chrzhang> & { "$env:HELLO\\CATSTART.exe" }
 ```
-
-----
-
 (wdw1)
 
 
