@@ -16,12 +16,12 @@ not needed for curr dir or something on `PATH`
 
 ### When invoking something at a path with an env var interpolated:
 ```powershell
-chrzhang> & { "$env:HELLO\CATSTART.exe" }
+& "$env:HELLO\CATSTART.exe"
 ```
 or
 
 ```powershell
-chrzhang> & { "$env:HELLO\\CATSTART.exe" }
+& "$env:HELLO\\CATSTART.exe"
 ```
 (wdw1)
 
