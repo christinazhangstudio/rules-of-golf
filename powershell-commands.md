@@ -28,6 +28,12 @@ or
 ```powershell
 & { & "$env:HELLO\\CATSTART.exe" }
 ```
+or
+
+```powershell
+ & { & $env:HELLO\\CATSTART.exe }
+```
+
 
 (wdw1)
 
