@@ -64,7 +64,7 @@ powershell.exe -Command "Get-Process"
 powershell.exe -Command "&{ & '$env:HELLO\CATSTART.exe' }"
 ```
 
-wdw(2)
+It has to be single quotes when used in `"&{ }"`! see wdw(2)
 
 
 ## When Powershell is giving you a hard time with path fmt:
@@ -105,6 +105,8 @@ C:\Program Files\...\bin\\CATSTART.exe
 & { "$env:HELLO\\CATSTART.exe" }
 C:\Program Files\...\bin\\CATSTART.exe
 ```
+
+It has to be single quotes when used in `"&{ }"`!
 
 (2)
 ```powershell
