@@ -79,3 +79,14 @@ Unexpected token '\CATSTART.exe' in expression or statement.
 chrzhang> & { '$env:HELLO\\CATSTART.exe' }
 $env:HELLO\\CATSTART.exe
 ```
+
+```powershell
+chrzhang> & { "$env:HELLO\CATSTART.exe" }
+C:\Program Files\...\bin\\CATSTART.exe
+```
+or
+
+```powershell
+chrzhang> & { "$env:HELLO\\CATSTART.exe" }
+C:\Program Files\...\bin\\CATSTART.exe
+```
