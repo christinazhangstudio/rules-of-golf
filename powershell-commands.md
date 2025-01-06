@@ -79,7 +79,7 @@ What doesn't work (wdw)
 (1) 
 
 ```powershell
-chrzhang> & { $env:HELLO\\CATSTART.exe}
+& { $env:HELLO\\CATSTART.exe}
 At line:1 char:15
 + & { $env:HELLO\\CATSTART.exe}
 +               ~~~~~~~~~~~~~~
@@ -89,34 +89,29 @@ Unexpected token '\\CATSTART.exe' in expression or statement.
 ```
 
 ```powershell
-chrzhang> & { $env:HELLO\CATSTART.exe}
-At line:1 char:15
-+ & { $env:HELLO\CATSTART.exe}
-+               ~~~~~~~~~~~~~
-Unexpected token '\CATSTART.exe' in expression or statement.
-    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
-    + FullyQualifiedErrorId : UnexpectedToken
-```
-
-```powershell
-chrzhang> & { '$env:HELLO\\CATSTART.exe' }
+& { '$env:HELLO\\CATSTART.exe' }
 $env:HELLO\\CATSTART.exe
 ```
 
 ```powershell
-chrzhang> & { "$env:HELLO\CATSTART.exe" }
+& { "$env:HELLO\CATSTART.exe" }
 C:\Program Files\...\bin\\CATSTART.exe
 ```
+
 ```powershell
-chrzhang> & { "$env:HELLO\\CATSTART.exe" }
+& { "$env:HELLO\\CATSTART.exe" }
 C:\Program Files\...\bin\\CATSTART.exe
 ```
 
 (2)
 ```powershell
 powershell -Command "&{ & "$env:HELLO\CATSTART.exe" }"
+& : The term 'C:\Program' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name,
+or if a path was included, verify that the path is correct and try again.
 ```
 
 ```powershell
 powershell -Command "&{ & $env:HELLO\CATSTART.exe }"
+& : The term 'C:\Program' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name,
+or if a path was included, verify that the path is correct and try again.
 ```
