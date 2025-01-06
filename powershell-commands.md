@@ -18,6 +18,7 @@ not needed for curr dir or something on `PATH`
 ```powershell
 & $env:HELLO\CATSTART.exe
 ```
+or
 
 ```powershell
 & "$env:HELLO\CATSTART.exe"
