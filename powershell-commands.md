@@ -65,6 +65,7 @@ At line:1 char:15
 Unexpected token '\\CATSTART.exe' in expression or statement.
     + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
     + FullyQualifiedErrorId : UnexpectedToken
+```
 
 ```powershell
 chrzhang> & { $env:HELLO\CATSTART.exe}
