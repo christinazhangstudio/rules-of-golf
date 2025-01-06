@@ -101,8 +101,6 @@ $env:HELLO\\CATSTART.exe
 chrzhang> & { "$env:HELLO\CATSTART.exe" }
 C:\Program Files\...\bin\\CATSTART.exe
 ```
-or
-
 ```powershell
 chrzhang> & { "$env:HELLO\\CATSTART.exe" }
 C:\Program Files\...\bin\\CATSTART.exe
