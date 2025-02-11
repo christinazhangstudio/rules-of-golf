@@ -1,5 +1,5 @@
 @echo off
-rem setlocal EnableDelayedExpansion is sometimes recommended, but seemingly not needed here
+rem setlocal EnableDelayedExpansion is sometimes recommended, but seemingly not needed here, it will also give you problems if an env val has '!' in it
 
 rem Vault login
 set VAULT_ADDR="<VAULT_ADDR>"
