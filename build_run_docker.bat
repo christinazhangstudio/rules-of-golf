@@ -1,5 +1,5 @@
 @echo off
-setlocal EnableDelayedExpansion
+rem setlocal EnableDelayedExpansion is sometimes recommended, but seemingly not needed here
 
 rem Vault login
 set VAULT_ADDR="<VAULT_ADDR>"
