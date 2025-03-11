@@ -5,6 +5,11 @@ To find something anywhere:
 Get-ChildItem -Path "C:\" -Filter "*.exe" -Recurse -File
 ```
 
+## Unsetting an env permanently
+```
+Remove-Item Env:GOWORK
+```
+
 ## Using `&`
 
 ### When invoking something at a path:
